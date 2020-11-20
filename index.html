@@ -33,21 +33,47 @@
                     </div>-->
 
                     <div>
-                        <h1 >YOUR SCORE: <span id="userScore"></span></h1>
-                        <h1 >COMPUTER SCORE: <span id="computerScore"></span></h1>
+                        <h1 >YOUR SCORE: <span id="userScore">0</span></h1>
+                        <h1 >COMPUTER SCORE: <span id="computerScore">0</span></h1>
                     </div>
 
                     <form action="#" method="post">
                         <div id="optionsByLevel" class="field">
 
-                            <a href="#"><img id="1" class="selector" src="./images/rock.png" width="250"></a>
+                            <table>
+                                <tr>
+                                    <th colspan="3">USER'S WEAPONS</th>
+                                    <th>COMPUTER'S WEAPON</th>
+                                </tr>
+                                <tr>
+                                    <td><a href="#"><img id="1" class="selector" src="./images/rock.png" width="250"></a></td>
+                                    <td><a href="#"><img id="2" class="selector" src="./images/paper.png" width="250"></a></td>
+                                    <td><a href="#"><img id="3" class="selector" src="./images/scissors.png" width="250"></a></td>
+                                    <td rowspan="2" align="center"><img id="imageComputer" src="./images/Mickey-Mouse.gif"></td>
+                                </tr>
+                                <tr style="visibility:hidden">
+                                    <td><a href="#"><img id="4" class="selector" src="./images/gun0.png" width="200"></a></td>
+                                    <td><a href="#"><img id="5" class="selector" src="./images/devil0.png" width="200"></a></td>
+                                    <td><a href="#"><img id="6" class="selector" src="./images/peace.png" width="200"></a></td>
+                                    <td rowspan="0"></td>
+                                </tr>
+                            </table>
+
+
+                          <!--  <a href="#"><img id="1" class="selector" src="./images/rock.png" width="250"></a>
                             <a href="#"><img id="2" class="selector" src="./images/paper.png" width="250"></a>
-                            <a href="#"><img id="3" class="selector" src="./images/scissors.png" width="250"></a>
+                            <a href="#"><img id="3" class="selector" src="./images/scissors.png" width="250"></a>-->
+
+
+
 <!--                            <input type="image" class="selector" id="1" src="./images/rock.png">
                             <input type="image" class="selector" id="2" src="./images/paper.png">
                             <input type="image" class="selector" id="3" src="./images/scissors.png">-->
 
-                            <img id="imageComputer" src="./images/Mickey-Mouse.gif">
+                           <!-- <img id="imageComputer" src="./images/Mickey-Mouse.gif">-->
+
+
+
 <!--                            <input type="image" class="selector" id="4" src="./images/gun0.png">
                             <input type="image" class="selector" id="5" src="./images/devil0.png">
                             <input type="image" class="selector" id="6" src="./images/peace.png">-->
