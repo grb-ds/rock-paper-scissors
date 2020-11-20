@@ -1,11 +1,3 @@
-<!--
- * becode/javascript
- *
- * /02-maths/02-calculator-two/index.html - 2.2: calculatrice (2)
- *
- * coded by leny@BeCode
- * started at 26/10/2018
--->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -35,16 +27,22 @@
                     <i class="fas fa-clock" style="font-size:48px;color:red;"></i>
                     <i class="fas fa-clock" style="font-size:60px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>-->
 
+<!--                    <div>
+                        <img class="dot-level" id="level1" src="./images/level1.png" width="80" onclick="showLevel1()">
+                        <img class="dot-level" src="./images/level2-0.png" width="80" onclick="showLevel2()">
+                    </div>-->
+
                     <div>
-                        <img class="dot-level" id="level1" src="./images/level1.png" width="150" onclick="showLevel1()">
-                        <img class="dot-level" src="./images/level2-0.png" width="150" onclick="showLevel2()">
+                        <h1 >YOUR SCORE: <span id="userScore"></span></h1>
+                        <h1 >COMPUTER SCORE: <span id="computerScore"></span></h1>
                     </div>
 
                     <form action="#" method="post">
                         <div id="optionsByLevel" class="field">
-                            <a href="#"><img id="1" class="selector" src="./images/rock.png"></a>
-                            <a href="#"><img id="2" class="selector" src="./images/paper.png"></a>
-                            <a href="#"><img id="3" class="selector" src="./images/scissors.png"></a>
+
+                            <a href="#"><img id="1" class="selector" src="./images/rock.png" width="250"></a>
+                            <a href="#"><img id="2" class="selector" src="./images/paper.png" width="250"></a>
+                            <a href="#"><img id="3" class="selector" src="./images/scissors.png" width="250"></a>
 <!--                            <input type="image" class="selector" id="1" src="./images/rock.png">
                             <input type="image" class="selector" id="2" src="./images/paper.png">
                             <input type="image" class="selector" id="3" src="./images/scissors.png">-->
@@ -64,10 +62,10 @@
                         <div class="field">
                          <!--  <img id="imageComputer" src="./images/Mickey-Mouse.gif">-->
                         </div>
-                        <div class="field">
+<!--                        <div class="field">
                             <label for="number">Your number:</label>
                             <input type="text" name="number" id="number" />
-                        </div>
+                        </div>-->
                         <div class="actions">
                             <button type="button" class="operator" id="run" >PLAY</button>
                             <button type="button" class="operator" id="runAgain" >PLAY AGAIN</button>

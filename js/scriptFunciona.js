@@ -216,7 +216,6 @@
         }else {
             if (isWinChildInOption(user.option,computer.id_Option)) {
                 user.flag = true;
-                user.score += 10;
                 computer.flag = false;
                 console.log("WINNER user");
                 winner = Object.assign({}, user);
@@ -225,7 +224,6 @@
             } else if (isLoseChildInOption(user.option,computer.id_Option)) {
                 user.flag = false;
                 computer.flag = true;
-                computer.score += 10;
                 console.log("WINNER PC");
                 winner = Object.assign({}, computer);
                 return winner;
@@ -234,17 +232,11 @@
         }
     }
 
-    const showScore = () =>{
-        document.getElementById("userScore").innerHTML = user.score;
-        document.getElementById("computerScore").innerHTML = computer.score;
-    }
-
     const showWinner = (message) =>{
         console.log("showWinner");
         winner = getWinner();
         console.log(winner);
         showMessage(getWinnerMessage());
-        showScore();
     };
 
     /*const getMessage0 = (message) => {
