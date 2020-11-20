@@ -31,6 +31,14 @@
                         <img class="dot-level" id="level1" src="./images/level1.png" width="80" onclick="showLevel1()">
                         <img class="dot-level" src="./images/level2-0.png" width="80" onclick="showLevel2()">
                     </div>-->
+                    <div>
+                        <h3 id="myLevel">YOU ARE IN LEVEL 1</h3>
+                        <label id="myLevelChange">CHANGE LEVEL 2</label>
+                        <label class="switch">
+                            <input id="level"type="checkbox" unchecked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
 
                     <div>
                         <h1 >YOUR SCORE: <span id="userScore">0</span></h1>
@@ -51,7 +59,7 @@
                                     <td><a href="#"><img id="3" class="selector" src="./images/scissors.png" width="250"></a></td>
                                     <td rowspan="2" align="center"><img id="imageComputer" src="./images/Mickey-Mouse.gif"></td>
                                 </tr>
-                                <tr style="visibility:hidden">
+                                <tr id="levelTable" style="visibility:hidden">
                                     <td><a href="#"><img id="4" class="selector" src="./images/gun0.png" width="200"></a></td>
                                     <td><a href="#"><img id="5" class="selector" src="./images/devil0.png" width="200"></a></td>
                                     <td><a href="#"><img id="6" class="selector" src="./images/peace.png" width="200"></a></td>
