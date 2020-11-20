@@ -1,0 +1,90 @@
+<!--
+ * becode/javascript
+ *
+ * /02-maths/02-calculator-two/index.html - 2.2: calculatrice (2)
+ *
+ * coded by leny@BeCode
+ * started at 26/10/2018
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>ROCK-PAPER-SCISSORS</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+        <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>ROCK-PAPER-SCISSORS</h1>
+            </header>
+            <div class="content">
+                <section class="explain">
+                    <p>Good Luck Guys!</p>
+                </section>
+                <section class="material">
+
+<!--                <i class="fas fa-sticky-note"></i>
+                    <i class="fas fa-cut"></i>
+                    <i class="fas fa-hand-rock regular"></i>
+                    <i class="fas fa-clock" style="font-size:24px;"></i>
+                    <i class="fas fa-clock" style="font-size:36px;"></i>
+                    <i class="fas fa-clock" style="font-size:48px;color:red;"></i>
+                    <i class="fas fa-clock" style="font-size:60px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>-->
+
+                    <div>
+                        <img class="dot-level" id="level1" src="./images/level1.png" width="150" onclick="showLevel1()">
+                        <img class="dot-level" src="./images/level2-0.png" width="150" onclick="showLevel2()">
+                    </div>
+
+                    <form action="#" method="post">
+                        <div id="optionsByLevel" class="field">
+                            <a href="#"><img id="1" class="selector" src="./images/rock.png"></a>
+                            <a href="#"><img id="2" class="selector" src="./images/paper.png"></a>
+                            <a href="#"><img id="3" class="selector" src="./images/scissors.png"></a>
+<!--                            <input type="image" class="selector" id="1" src="./images/rock.png">
+                            <input type="image" class="selector" id="2" src="./images/paper.png">
+                            <input type="image" class="selector" id="3" src="./images/scissors.png">-->
+
+                            <img id="imageComputer" src="./images/Mickey-Mouse.gif">
+<!--                            <input type="image" class="selector" id="4" src="./images/gun0.png">
+                            <input type="image" class="selector" id="5" src="./images/devil0.png">
+                            <input type="image" class="selector" id="6" src="./images/peace.png">-->
+
+<!--                        <img id="1" src="./images/rock.png">
+                            <img id="2" src="./images/paper.png">
+                            <img id="3" src="./images/scissors.png">
+                            <img id="4" src="./images/gun0.png" >
+                            <img id="5" src="./images/devil0.png">
+                            <img id="6" src="./images/peace.png">-->
+                        </div>
+                        <div class="field">
+                         <!--  <img id="imageComputer" src="./images/Mickey-Mouse.gif">-->
+                        </div>
+                        <div class="field">
+                            <label for="number">Your number:</label>
+                            <input type="text" name="number" id="number" />
+                        </div>
+                        <div class="actions">
+                            <button type="button" class="operator" id="run" >PLAY</button>
+                            <button type="button" class="operator" id="runAgain" >PLAY AGAIN</button>
+                        </div>
+                    </form>
+                </section>
+
+                <section>
+                    <div class="box">
+                        <p id="target"></p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>
+
