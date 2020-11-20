@@ -1,0 +1,44 @@
+html{
+    background-color: black;
+}
+
+
+.fa {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa:hover {
+    color: darkblue;
+}
+
+.dot {
+    height: 250px;
+    width: 250px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-level {
+    height: 150px;
+    width: 170px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    align-content: center;
+}
+
+.box {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+
+.box p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}
