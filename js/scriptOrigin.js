@@ -9,16 +9,24 @@
         this.option = null;
     }
 
+
     let user = new Player("GIOMY");
     let computer = new Player("COMPUTER");
     let winner;
     let level = 1;
 
-   const game_options1 = [
-        {id: 1, name: "rock", id_with_win: [3], id_with_lose: [2], image : "./images/rock.png"},
-        {id: 2, name: "paper", id_with_win: [1], id_with_lose: [3], image : "./images/paper.png"},
-        {id: 3, name: "scissors", id_with_win: [2], id_with_lose: [1], image : "./images/scissors0.png"},
-    ];
+
+   /* const game_optionsO = [
+        {id: 1, name: "rock", id_with_win: 3, id_with_lose: 2, image : "./images/rock.png"},
+        {id: 2, name: "paper", id_with_win: 1, id_with_lose: 3, image : "./images/paper.png"},
+        {id: 3, name: "scissors", id_with_win: 2, id_with_lose: 1, image : "./images/scissors0.png"},
+    ];*/
+
+       const game_options1 = [
+            {id: 1, name: "rock", id_with_win: [3], id_with_lose: [2], image : "./images/rock.png"},
+            {id: 2, name: "paper", id_with_win: [1], id_with_lose: [3], image : "./images/paper.png"},
+            {id: 3, name: "scissors", id_with_win: [2], id_with_lose: [1], image : "./images/scissors0.png"},
+        ];
 
     const game_options2 = [
         {id: 1, name: "rock", id_with_win: [3,6], id_with_lose: [2,5], image : "./images/rock.png"},
@@ -29,12 +37,31 @@
         {id: 6, name: "peace", id_with_win: [2,5], id_with_lose: [1,4], image : "./images/peace.png"},
     ];
 
+/*
+    const game_options3 = [
+        {id: 1, name: "rock", id_with_win: {0: 3, 1: 6}, id_with_lose: {0: 2, 1: 5}, image : "./images/rock.png"},
+        {id: 2, name: "paper", id_with_win: {0: 1, 1: 4}, id_with_lose: {0: 3, 1: 6}, image : "./images/paper.png"},
+        {id: 3, name: "scissors", id_with_win: {0: 2, 1: 5}, id_with_lose: {0: 1, 1: 4}, image : "./images/scissors0.png"},
+        {id: 4, name: "gun", id_with_win: {0: 3, 1: 6}, id_with_lose: {0: 2, 1: 5}, image : "./images/gun0.png"},
+        {id: 5, name: "devil", id_with_win: {0: 1, 1: 4}, id_with_lose: {0: 3, 1: 6}, image : "./images/devil0.png"},
+        {id: 6, name: "peace", id_with_win: {0: 2, 1: 5}, id_with_lose: {0: 1, 1: 4}, image : "./images/peace.png"},
+    ];
+*/
+
+
+
+    /*var getGameOption = (id_option) =>{
+        return game_options.find(option => option.id === id_option);
+    }*/
+
     var getGameOption = (id_option) =>{
         if (level === 1)
             return game_options1.find(option => option.id === id_option);
         else
             return game_options2.find(option => option.id === id_option);
     }
+
+
 
     var isWinChildInOption = (option, id_optionTofind) =>{
         return function () {
@@ -235,6 +262,16 @@
         showScore();
     };
 
+    /*const getMessage0 = (message) => {
+        return function (message) {
+            if (winner === null ) {
+                message = "TIE!!!";
+            }else {
+                user.flag ? message = "YOU WON!!!" : message = "YOU LOST";
+            }
+        }
+    }*/
+
     const getWinnerMessage = () => {
         let message;
         if (winner === null ) {
@@ -274,6 +311,10 @@
         //TODO clean user id_Option
         //TODO remove user listener?????
         console.log(" showAllOptions");
+/*        Array.from(document.querySelectorAll("img.selector")).forEach(img => {
+            console.log(" forEach showOption");
+            showOption(img.id);
+        });*/
 
         Array.from(document.getElementsByTagName("img")).forEach(img => {
 
@@ -305,6 +346,11 @@
     function getElementByTagName(tag){
         return document.getElementsByTagName(tag);
     }
+
+    /*function getElementChildTag(elm,tag){
+        return document.getElementById(elm).getElementsByTagName(tag);
+    }*/
+
 
     const resetUser = () => {
 
@@ -418,6 +464,8 @@
         document.getElementById("levelTable").style.visibility = "hidden";
     }
 
+
+
     document.getElementById("level").addEventListener( 'change', function() {
         resetVariable();
         resetStyle();
@@ -432,7 +480,21 @@
         }
     });
 
-    document.getElementById("run").addEventListener("click", play());
+
+    document.getElementById("run").addEventListener("click", play()); /*function(){
+        console.log("before user");
+        setUserOption();
+        console.log("before computer");
+        setComputerOption();
+        console.log("after computer");
+        showComputerOption();
+        console.log("before winner");
+        winner = getWinner();
+        //TODO: SHOWRESULT
+        console.log(winner);
+        winner != null ?
+            console.log(`Winner ${winner.nick}`) :
+            console.log(`TIE!`);*/
 
 
 
